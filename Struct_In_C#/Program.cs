@@ -97,6 +97,7 @@ internal class Program
         Employee employee3 = new Employee();
         employee3.Setvalues(104, "Sam", "IT", 80000);
         employee3.Display();
+        
 
         // Default Constructor using class
         Student student = new Student();
@@ -109,7 +110,51 @@ internal class Program
         Manager manager = new Manager();
         manager.Display();
         IEmployee iemployee = new Manager();
+
         iemployee.Display();
+        Guid guid = Guid.NewGuid();  // Generates a new GUID (Globally Unique Identifier)
+        Console.WriteLine(guid.ToString());
+        ///is/as operator
+        //
+        object obj = 12;
+        if (obj is string)
+        {
+            Console.WriteLine(((string)obj).Length);
+            Console.WriteLine("It is a string");
+        }
+        else
+        {
+            Console.WriteLine("It is not a string");
+        }
+        //int a=10;
+        //if (a is string)
+        //{
+        //    Console.WriteLine("It is a string");
+        //}
+        //else
+        //{
+        //    Console.WriteLine("It is not a string");
+        //}
+       object obj2 = "13";
+        int reult = obj2 as int? ?? 0;
+        if (reult == 0)
+        {
+            Console.WriteLine("Null");
+        }
+        else
+        {
+            Console.WriteLine("Not Null");
+        }
+        int ? num = obj2 as int?;
+        if (num == 0)
+        {
+            Console.WriteLine("Null");
+        }
+        else
+        {
+            Console.WriteLine("Not Null");
+        }
+
 
 
     }
